@@ -3,11 +3,11 @@ const url = require('url');
 const fs = require('fs');
 const path = require('path');
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const server = http.createServer((req, res) => {
   const parsedUrl = url.parse(req.url);
-  let pathname = `.${parsedUrl.pathname}`;
+  let pathname = path.resolve(__dirname, '.' + parsedUrl.pathname);
 
   fs.stat(pathname, (err, stats) => {
     if (err) {
