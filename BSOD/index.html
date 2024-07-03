@@ -1,0 +1,38 @@
+<span style="font-family:arial; color:red"><center><h1>How to <span style="color:blue">BSOD</span> your computer/laptop in 2023</h1></center></span>
+<br><span style="font-family:arial">
+  <br><h2><center>Before we start, please save any unsaved files. <span style="color:blue">BSOD</span><span style="font-family:arial">s (<span style="color:blue">B</span>lue <span style="color:blue">S</span>creens <span style="color:blue">O</span>f <span style="color:blue">D</span>eath) force-close all open programs and files without saving, so if you don't save you may lose some progress.</center>
+    <br>
+    <br>Way 1 (Killing <span style="color:coral">wininit</span>):</h2>
+<h3>Step 1: Press the windows logo on the bottom left on your screen.
+<br>
+<br>Step 2: Search "<span style="color:orange">taskmgr</span>"
+<br>
+<br>Step 3: Right click on "<span style="color:orange">taskmgr</span>" or "<span style="color:orange">Task Manager</span>" and click "<span style="color:red">Run As Administrator</span>"
+<br>
+<br>Step 4: Go to the "Details" tab.
+<br>
+<br>Step 5: Find "<span style="color:coral">csrss.exe</span>" or "<span style="color:coral">wininit.exe</span>".
+<br>
+<br>Step 6: Right click on it and press "<span style="color:red">End Task</span>"
+<br>
+<br>Step 7: Tick the checkbox and press "<span style="color:red">End</span>"</h3>
+  <br>
+  <br><h2>Way 2 (Editing the registry):</h2>
+  <h3>Step 1: Press the windows logo on the bottom left.
+  <br>
+  <br>Step 2: Search "regedit" and run it.
+  <br>
+  <br>Step 3: Now, you have to find out if your keyboard is a <span style="color:yellow">USB</span> type or a <span style="color:green">PS/2</span> one. To find this out, check the cable of the keyboard. If it a rectangle it is an <span style="color:yellow">USB</span> and if it is round it is a <span style="color:green">PS/2</span> one.
+  <br>
+  <br>Step 4: If it is a <span style="color:green">PS/2</span> one, navigate to: 
+  <br> <span style="color:red">HKEY_LOCAL_MACHINE > SYSTEM > CurrentControlSet > services > i8042prt > Parameters</span>
+  <br>
+  <br> If it is an <span style="color:yellow">USB</span> one, navigate to:
+  <br> <span style="color:red">HKEY_LOCAL_MACHINE > SYSTEM > CurrentControlSet > Services > kbdhid > Parameters</span>
+  <br>
+  <br>Step 5: Right click and create a new "DWORD (x32)" parameter named "CrashOnCtrlScroll". Then, right click on the parameter and click "Edit". Set it to "1".
+    <br>
+    <br>Step 6: Restart your computer. To make the BSOD happen, you have to hold down the right control button on your keyboard and press the Scroll Lock (Scr Lk) key twice.
+    <br><img src="images/Keys.jpg">
+  </h3>
+<title>BSOD - Da Crib</title>
