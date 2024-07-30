@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batch File and Directory Operations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Batch File and Directory Operations</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#commands">Common Commands</a></li>
+            <li><a href="#examples">Examples</a></li>
+            <li><a href="#resources">Additional Resources</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="intro">
+            <h2>Introduction</h2>
+            <p>Batch files can be used to perform various file and directory operations such as creating, deleting, renaming, and copying files and directories. In this tutorial, we will cover these basic operations.</p>
+        </section>
+        <section id="commands">
+            <h2>Common Commands</h2>
+            <p>Here are some commonly used commands for file and directory operations:</p>
+            <ul>
+                <li><code>mkdir</code>: Creates a new directory.</li>
+                <li><code>rmdir</code>: Removes a directory.</li>
+                <li><code>del</code>: Deletes one or more files.</li>
+                <li><code>copy</code>: Copies files from one location to another.</li>
+                <li><code>move</code>: Moves files from one location to another.</li>
+                <li><code>ren</code>: Renames a file or directory.</li>
+            </ul>
+        </section>
+        <section id="examples">
+            <h2>Examples</h2>
+            <p>Here are some examples of file and directory operations:</p>
+            <h3>Example 1: Creating and Removing a Directory</h3>
+            <pre><code>
+                @echo off
+                mkdir C:\MyNewFolder
+                echo Directory created.
+                pause
+                rmdir C:\MyNewFolder
+                echo Directory removed.
+                pause
+            </code></pre>
+            <p>This example creates a new directory named "MyNewFolder" in the C: drive and then removes it.</p>
+            <h3>Example 2: Copying and Moving Files</h3>
+            <pre><code>
+                @echo off
+                copy C:\example.txt D:\example.txt
+                echo File copied.
+                pause
+                move D:\example.txt D:\new_example.txt
+                echo File moved and renamed.
+                pause
+            </code></pre>
+            <p>This example copies a file from the C: drive to the D: drive and then moves and renames it.</p>
+            <h3>Example 3: Deleting Files</h3>
+            <pre><code>
+                @echo off
+                del C:\Temp\*.tmp
+                echo Temporary files deleted.
+                pause
+            </code></pre>
+            <p>This example deletes all .tmp files in the C:\Temp directory.</p>
+        </section>
+        <section id="resources">
+            <h2>Additional Resources</h2>
+            <ul>
+                <li><a href="https://www.computerhope.com/batch.htm">Computer Hope: Batch File Help</a></li>
+                <li><a href="https://www.tutorialspoint.com/batch_script/index.htm">TutorialsPoint: Batch Script Tutorial</a></li>
+                <li><a href="https://ss64.com/nt/">SS64: Command Line Reference</a></li>
+                <li><a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands">Microsoft Docs: Windows Commands</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Batch File Tutorials</p>
+    </footer>
+</body>
+</html>
