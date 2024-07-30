@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Batch File Commands</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Advanced Batch File Commands</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#conditional">Conditional Statements</a></li>
+            <li><a href="#loops">Loops</a></li>
+            <li><a href="#functions">Functions and Labels</a></li>
+            <li><a href="#examples">Examples</a></li>
+            <li><a href="#resources">Additional Resources</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="intro">
+            <h2>Introduction</h2>
+            <p>In this tutorial, we will explore more advanced commands in batch scripting, including conditional statements, loops, and functions.</p>
+        </section>
+        <section id="conditional">
+            <h2>Conditional Statements</h2>
+            <p>Conditional statements allow batch files to make decisions. Here is an example using the IF statement:</p>
+            <pre><code>
+                @echo off
+                set /p userInput="Enter a number: "
+                if %userInput%==1 (
+                    echo You entered one.
+                ) else (
+                    echo You did not enter one.
+                )
+                pause
+            </code></pre>
+            <p>The IF statement checks if the user input is equal to 1. If it is, it displays "You entered one." Otherwise, it displays "You did not enter one."</p>
+        </section>
+        <section id="loops">
+            <h2>Loops</h2>
+            <p>Loops are used to repeat a block of commands. Here is an example using the FOR loop:</p>
+            <pre><code>
+                @echo off
+                for %%i in (1 2 3 4 5) do (
+                    echo %%i
+                )
+                pause
+            </code></pre>
+            <p>The FOR loop iterates through the list (1 2 3 4 5) and echoes each number to the screen.</p>
+        </section>
+        <section id="functions">
+            <h2>Functions and Labels</h2>
+            <p>Batch files can use labels and the GOTO command to create functions and subroutines. Here is an example:</p>
+            <pre><code>
+                @echo off
+                call :myFunction
+                echo Back to main
+                pause
+
+                :myFunction
+                echo Inside function
+                goto :eof
+            </code></pre>
+            <p>This batch file defines a function named <code>:myFunction</code>. The <code>call</code> command runs the function, and <code>goto :eof</code> returns to the main program.</p>
+        </section>
+        <section id="examples">
+            <h2>Examples</h2>
+            <p>Here are some more advanced examples of batch files:</p>
+            <h3>Example 1: File Existence Check</h3>
+            <pre><code>
+                @echo off
+                if exist "C:\example.txt" (
+                    echo File exists.
+                ) else (
+                    echo File does not exist.
+                )
+                pause
+            </code></pre>
+            <p>This example checks if a file named "example.txt" exists in the C: drive and displays a message accordingly.</p>
+            <h3>Example 2: Loop Through Files</h3>
+            <pre><code>
+                @echo off
+                for %%f in (C:\*.txt) do (
+                    echo %%f
+                )
+                pause
+            </code></pre>
+            <p>This example loops through all .txt files in the C: drive and echoes their names.</p>
+            <h3>Example 3: Simple Menu</h3>
+            <pre><code>
+                @echo off
+                :menu
+                echo 1. Option 1
+                echo 2. Option 2
+                echo 3. Exit
+                set /p choice="Choose an option: "
+                if %choice%==1 goto option1
+                if %choice%==2 goto option2
+                if %choice%==3 goto exit
+                goto menu
+
+                :option1
+                echo You chose option 1.
+                pause
+                goto menu
+
+                :option2
+                echo You chose option 2.
+                pause
+                goto menu
+
+                :exit
+            </code></pre>
+            <p>This example creates a simple menu that lets the user choose between different options. Depending on the choice, it jumps to different labels.</p>
+        </section>
+        <section id="resources">
+            <h2>Additional Resources</h2>
+            <ul>
+                <li><a href="https://ss64.com/nt/">SS64: Command Line Reference</a></li>
+                <li><a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands">Microsoft Docs: Windows Commands</a></li>
+                <li><a href="https://www.tutorialspoint.com/batch_script/index.htm">TutorialsPoint: Batch Script Tutorial</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Batch File Tutorials</p>
+    </footer>
+</body>
+</html>
