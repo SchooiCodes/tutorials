@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating a Basic Batch File</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Creating a Basic Batch File</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#syntax">Syntax</a></li>
+            <li><a href="#commands">Common Commands</a></li>
+            <li><a href="#examples">Examples</a></li>
+            <li><a href="#resources">Additional Resources</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="intro">
+            <h2>Introduction</h2>
+            <p>A batch file is a script file in DOS, OS/2, and Microsoft Windows. It consists of a series of commands to be executed by the command-line interpreter, stored in a plain text file. Batch files are used to automate repetitive tasks, configure system settings, and run programs.</p>
+        </section>
+        <section id="syntax">
+            <h2>Syntax</h2>
+            <p>The basic syntax of a batch file is a simple series of commands. Here is an example:</p>
+            <pre><code>
+                @echo off
+                echo Hello, World!
+                pause
+            </code></pre>
+            <p>Each line in a batch file represents a command to be executed. The <code>@echo off</code> command prevents the commands from being displayed in the command prompt. The <code>echo</code> command prints text to the screen, and the <code>pause</code> command waits for the user to press a key before continuing.</p>
+        </section>
+        <section id="commands">
+            <h2>Common Commands</h2>
+            <p>Here are some commonly used commands in batch files:</p>
+            <ul>
+                <li><code>echo</code>: Displays messages, or turns command echoing on or off.</li>
+                <li><code>pause</code>: Suspends processing of a batch program and displays a message.</li>
+                <li><code>cls</code>: Clears the screen.</li>
+                <li><code>rem</code>: Adds comments in the batch file.</li>
+                <li><code>set</code>: Sets environment variables.</li>
+                <li><code>if</code>: Performs conditional processing in batch programs.</li>
+                <li><code>for</code>: Runs a specified command for each file in a set of files.</li>
+                <li><code>goto</code>: Directs the batch program to jump to a labeled line.</li>
+                <li><code>call</code>: Calls another batch file and returns to the current one after execution.</li>
+            </ul>
+        </section>
+        <section id="examples">
+            <h2>Examples</h2>
+            <p>Here are some basic examples of batch files:</p>
+            <h3>Example 1: Display Message</h3>
+            <pre><code>
+                @echo off
+                echo This is a batch file example.
+                pause
+            </code></pre>
+            <p>This example displays a message and waits for the user to press a key.</p>
+            <h3>Example 2: Creating a Directory</h3>
+            <pre><code>
+                @echo off
+                mkdir MyNewFolder
+                echo Folder created.
+                pause
+            </code></pre>
+            <p>This example creates a new directory named "MyNewFolder" and confirms the creation.</p>
+            <h3>Example 3: Deleting Files</h3>
+            <pre><code>
+                @echo off
+                del /Q C:\Temp\*.tmp
+                echo Temporary files deleted.
+                pause
+            </code></pre>
+            <p>This example deletes all .tmp files in the C:\Temp directory.</p>
+        </section>
+        <section id="resources">
+            <h2>Additional Resources</h2>
+            <ul>
+                <li><a href="https://www.computerhope.com/batch.htm">Computer Hope: Batch File Help</a></li>
+                <li><a href="https://www.tutorialspoint.com/batch_script/index.htm">TutorialsPoint: Batch Script Tutorial</a></li>
+                <li><a href="https://ss64.com/nt/">SS64: Command Line Reference</a></li>
+                <li><a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands">Microsoft Docs: Windows Commands</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Batch File Tutorials</p>
+    </footer>
+</body>
+</html>
